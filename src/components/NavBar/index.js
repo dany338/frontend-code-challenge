@@ -15,7 +15,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { openModalSignAtom } from '../../atoms/user';
-import Logo from '../../assets/logo/logo.svg';
+import Logo from '../../assets/logo/matter-logo-alt.svg';
 
 const NavBar = () => {
   const [openModalSign, setOpenModalSign] = useAtom(openModalSignAtom);

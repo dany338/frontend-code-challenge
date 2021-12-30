@@ -25,6 +25,10 @@ export const LogoContainer = styled(Link)`
   font-size: 1.2rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
+  > img {
+    width: 100%;
+    height: auto;
+  }
   svg {
     fill: #335EEA;
     margin-right: 0.5rem;

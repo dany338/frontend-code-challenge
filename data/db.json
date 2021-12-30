@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "DANIEL GALLO",
+      "email": "dany338@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "fullname": "CRISTIAN SUAREZ",
+      "email": "cristian@correo.com",
+      "password": "cristian"
+    },
+    {
+      "id": 3,
+      "fullname": "ALIVE COOPER",
+      "email": "alive.cooper@correo.com",
+      "password": "alive.cooper"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "user_id": 3,
+      "title": "Should I work remotely or will it put a strain on my long-term career?",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
+      "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-female.png",
+      "published": "Dec 24, 2021",
+      "price": "49",
+      "colorPrice": "primary",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-male.png",
+      "published": "May 20, 2019",
+      "price": "49",
+      "colorPrice": "secundary",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-nature.png",
+      "published": "May 20, 2019",
+      "price": "49",
+      "colorPrice": "terciary",
+      "favorite": false
+    },
+    {
+      "id": 4,
+      "user_id": 3,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-nature.png",
+      "published": "May 20, 2019",
+      "price": "49",
+      "colorPrice": "primary",
+      "favorite": true
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-female.png",
+      "published": "May 20, 2019",
+      "price": "49",
+      "colorPrice": "secundary",
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "user_id": 3,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "ALIVE COOPER",
+      "image": "./assets/images/image-blog-male.png",
+      "published": "May 20, 2019",
+      "price": "49",
+      "colorPrice": "terciary",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "DANIEL GALLO",
+      "image": "./assets/images/image-blog-male.png",
+      "published": "May 20, 2021",
+      "price": "49",
+      "colorPrice": "primary",
+      "favorite": false
+    }
+  ]
+}
