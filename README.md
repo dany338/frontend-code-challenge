@@ -8,7 +8,10 @@ Que no tenga comentarios demasiado largos o código basura y adicional que no se
 
 ## Ejecutar asi:
 
-npm test -- --coverage
-npm run cypress:open
-npm run fake-api
-npm run start
+### `npm test -- --coverage`
+
+### `npm run cypress:open`
+
+### `npm run fake-api`
+
+### `npm run start`
