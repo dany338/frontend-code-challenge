@@ -9,17 +9,17 @@ import StartGreyIcon from '../../assets/icons/star-grey.svg';
 import Ellipse from '../../assets/icons/Ellipse.svg';
 import cutString from '../../utils/cutString';
 
-const CardBlog = ({ id, image, colorPrice, favorite, title, description, author, published, onChangeFavorite, goToDetailBlog, typeQuery }) => (
+const CardBlog = ({ id, image, colorPrice, price, favorite, title, description, author, published, onChangeFavorite, goToDetailBlog, typeQuery }) => (
   <Container image={image} colorPrice={colorPrice} onClick={e => goToDetailBlog(e, id, typeQuery)}>
     <div className="image">
       <div className="header">
         <div>
-          <span>$49/mo</span>
+          <span>${price}/mo</span>
         </div>
         <img
           src={favorite ? StartYellowIcon : StartGreyIcon}
           alt='Star...'
-          onClick={e => onChangeFavorite(e, id, !favorite)}
+          onClick={e => onChangeFavorite(e, id, !favorite, typeQuery)}
         />
       </div>
     </div>

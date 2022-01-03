@@ -1,4 +1,5 @@
 import React, { lazy } from 'react';
+import { useParams } from "react-router-dom";
 import { useAtom } from 'jotai';
 import useModalSign from '../../hooks/useValidation';
 import useFormBlog from '../../hooks/useFormBlog';
@@ -20,22 +21,33 @@ const initialState = {
 
 const extractSelectedBlog = obj => {
   const {
+    id = '',
     title = '',
     description = '',
     content = '',
     image = '',
     price = '',
+    published = '',
+    author = '',
+    userId = '',
+    favorite = '',
   } = obj;
   return {
+    id,
     title,
     description,
     content,
     image,
     price,
+    published,
+    author,
+    userId,
+    favorite,
   };
 };
 
 const FormBlog = () => {
+  const { type } = useParams();
   const [selectedBlog, ] = useAtom(selectedBlogAtom);
 
   const [
@@ -43,7 +55,7 @@ const FormBlog = () => {
     values,
     handleChange,
     handleSubmit
-  ] = useModalSign(selectedBlog ? extractSelectedBlog(selectedBlog) : initialState, validateBlog, () => selectedBlog ? updateBlog() : createBlog());
+  ] = useModalSign((selectedBlog && type === 'update') ? extractSelectedBlog(selectedBlog) : initialState, validateBlog, () => (selectedBlog  && type === 'update') ? updateBlog() : createBlog());
 
   const [
     createBlog,

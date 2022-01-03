@@ -48,14 +48,14 @@ const NavBar = () => {
             <MenuItem>
               <MenuItemLink active={(location.pathname === '/').toString()} onClick={() => setShowMobileMenu(!showMobileMenu)} to="/">
                 <div>
-                  <span>Gits</span>
+                  <span>Articles</span>
                 </div>
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
               <MenuItemLink active={(location.pathname === '/favorites').toString()} onClick={() => setShowMobileMenu(!showMobileMenu)} to="/favorites">
                 <div>
-                  <span>Favorites Gits</span>
+                  <span>Favorites</span>
                 </div>
               </MenuItemLink>
             </MenuItem>

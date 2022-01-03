@@ -36,7 +36,7 @@ const AppRouter = () => {
         <Route path="/login" element={
           <Suspense fallback={<span>Loading...</span>} />
         } />
-        <Route path="/blog-form" element={
+        <Route path="/blog-form/:type" element={
           <Suspense fallback={<span>Loading...</span>} />
         } />
         <Route exact path="/favorites" element={
@@ -69,7 +69,7 @@ const AppRouter = () => {
             <FormSign />
           </Modal>
         } />
-        <Route path="/blog-form" element={
+        <Route path="/blog-form/:type" element={
           <Modal
             state={true}
             changeState={() => navigate(-1)}

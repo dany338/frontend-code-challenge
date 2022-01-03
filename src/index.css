@@ -17,7 +17,35 @@ body {
   bottom: 2%;
   cursor: pointer;
   border-radius: 6px;
+  z-index: 3;
 }
+
 .plusIcon:active {
+  transform: scale(0.9);
+}
+
+.editIcon {
+  position: fixed;
+  right: 6%;
+  bottom: 2%;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+.editIcon:active {
+  transform: scale(0.9);
+}
+
+.deleteIcon {
+  position: fixed;
+  right: 10%;
+  bottom: 2%;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+.deleteIcon:active {
   transform: scale(0.9);
 }

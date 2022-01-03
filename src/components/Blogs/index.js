@@ -10,7 +10,7 @@ import {
 const CardBlog = lazy(() => import('../../components/CardBlog'));
 const NotFound = lazy(() => import('../../components/NotFound'));
 
-const Blogs = ({ startPage, fetchSearchByQuery, loading, data, query, onChangeQuery, onLoadMore, onChangeFavorite, goToDetailBlog, typeQuery, loadmore }) => (
+const Blogs = ({ startPage, fetchSearchByQuery, loading, data, query, onChangeQuery, onLoadMore, onChangeFavorite, goToDetailBlog, typeQuery }) => (
   <Container>
     <Wrapper>
       <SearchBar fetchSearchByQuery={fetchSearchByQuery} placeholder="Search" value={query} onChangeValue={onChangeQuery} count={data.length} typeQuery={typeQuery} />

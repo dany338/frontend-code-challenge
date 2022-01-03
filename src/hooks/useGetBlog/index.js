@@ -34,17 +34,21 @@ const useGetBlog = () => {
   const [ , setChangeFavoritePending ] = useAtom(changeFavoritePendingAtom);
   const [ user, ] = useAtom(userAtom);
 
-  const onChangeFavorite = async (e, id, favorite) => {
+  const onChangeFavorite = async (e, id, favorite, type = (location.pathname === '/' ? ARTICLES : FAVORITES)) => {
     e.stopPropagation();
     e.preventDefault();
     if (user) {
       console.log('user', user);
       const responseFavorite = await updateFavoriteBlog(id, favorite);
       if (typeof responseFavorite === 'object') {
-        const newBlogs = blogsFiltered.map(blog =>  blog.id === responseFavorite.id ? { ...responseFavorite } : blog);
-        setBlogs(newBlogs);
-        setBlogsFiltered(newBlogs);
-        setBlogsFavoritesFiltered(newBlogs.filter(blog => blog.favorite));
+        const newBlogs = type === ARTICLES ? blogsFiltered.map(blog => blog.id === responseFavorite.id ? { ...responseFavorite } : blog) : blogsFavoritesFiltered.map(blog => blog.id === responseFavorite.id ? { ...responseFavorite } : blog);
+        console.log('newBlogs', newBlogs);
+        if (type === ARTICLES) {
+          setBlogs(newBlogs);
+          setBlogsFiltered(newBlogs);
+        } else if (type === FAVORITES) {
+          setBlogsFavoritesFiltered(newBlogs.filter(blog => blog.favorite));
+        }
       }
     } else {
       setChangeFavoritePending({id, favorite});

@@ -18,7 +18,7 @@ export const getUserByCredentials = login => new Promise( async (resolve, reject
 export const createAccount = data => new Promise( async (resolve, reject) => {
   try {
     const response = await api.post(USERS, data);
-    if (response.status === 200) {
+    if (response.status === 201) {
       resolve(response.data);
     } else {
       reject(response);
