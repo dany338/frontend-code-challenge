@@ -15,3 +15,9 @@ Que no tenga comentarios demasiado largos o código basura y adicional que no se
 ### `npm run fake-api`
 
 ### `npm run start`
+
+### Testing with those credentials:
+
+view the next file: data/db.json in sheme users
+dany338@gmail.com
+123456
