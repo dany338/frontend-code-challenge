@@ -14,10 +14,10 @@ const TextField = ({ label, type, typeInput, name, placeholder, value, onChange,
       <Wrapper>
         <SearchBox type={changeType}>
           {typeInput === 'textarea' ? (
-            <textarea className="form-control" rows="4" name={name} placeholder={placeholder} onChange={onChange} value={value}></textarea>
+            <textarea rows="4" name={name} value={value} placeholder={placeholder} onChange={onChange} />
           ) : (
             <>
-              <input className="form-control" type={changeType} name={name} value={value} placeholder={placeholder} onChange={onChange} />
+              <input type={changeType} name={name} value={value} placeholder={placeholder} onChange={onChange} />
               {(type === 'password' ) && (
                 <div className="icons" onClick={() => handleChangeType() }>
                   <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" >

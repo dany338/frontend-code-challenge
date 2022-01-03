@@ -9,8 +9,8 @@ import StartGreyIcon from '../../assets/icons/star-grey.svg';
 import Ellipse from '../../assets/icons/Ellipse.svg';
 import cutString from '../../utils/cutString';
 
-const CardBlog = ({ image, colorPrice, favorite, title, description }) => (
-  <Container image={image} colorPrice={colorPrice}>
+const CardBlog = ({ id, image, colorPrice, favorite, title, description, author, published, onChangeFavorite, goToDetailBlog, typeQuery }) => (
+  <Container image={image} colorPrice={colorPrice} onClick={e => goToDetailBlog(e, id, typeQuery)}>
     <div className="image">
       <div className="header">
         <div>
@@ -19,6 +19,7 @@ const CardBlog = ({ image, colorPrice, favorite, title, description }) => (
         <img
           src={favorite ? StartYellowIcon : StartGreyIcon}
           alt='Star...'
+          onClick={e => onChangeFavorite(e, id, !favorite)}
         />
       </div>
     </div>
@@ -33,10 +34,10 @@ const CardBlog = ({ image, colorPrice, favorite, title, description }) => (
           src={Ellipse}
           alt='User...'
         />
-        <span>ALIVE COOPER</span>
+        <span>{author}</span>
       </div>
       <div>
-        <span>MAY 02</span>
+        <span>{cutString(published, 6)}</span>
       </div>
     </div>
   </Container>

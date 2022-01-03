@@ -17,6 +17,16 @@ export const Container = styled.div`
 	overflow: hidden;
   width: 100%;
   height: auto;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  &:hover {
+    border-radius: 0.5rem;
+    transition: outline-offset 0.1s ease;
+    outline-offset: 4px;
+    outline: #ffd644 auto 1px;
+    cursor: pointer;
+  }
 
   .header {
     padding: 20px;
@@ -44,6 +54,10 @@ export const Container = styled.div`
 
     img {
       cursor: pointer;
+
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
 
@@ -130,4 +144,8 @@ export const Container = styled.div`
       }
     }
   }
+
+  /* &:active {
+    transform: scale(0.95);
+  } */
 `;

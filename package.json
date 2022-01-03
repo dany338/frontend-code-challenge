@@ -1,11 +1,12 @@
 {
-  "name": "frontend-code-challenge",
+  "name": "frontend-react-test-dany338",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
     "cypress": "^9.2.0",
     "fetch-mock": "^9.11.0",
     "jotai": "^1.4.9",

@@ -39,6 +39,7 @@ const Modal = ({
 )
 
 export default Modal;
+// {/* ReactDOM.createPortal(, document.getElementById('portal')) <ModalSign /> */}
 
 function ModalPortal({ children }) {
   const portalNode = document.createElement('div');

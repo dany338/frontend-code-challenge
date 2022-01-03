@@ -18,3 +18,6 @@ body {
   cursor: pointer;
   border-radius: 6px;
 }
+.plusIcon:active {
+  transform: scale(0.9);
+}

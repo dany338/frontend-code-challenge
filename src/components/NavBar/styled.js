@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-
+import Colors from '../../styleguide/colors';
 export const Container = styled.div`
   width: 100%;
   height: 70px;
@@ -25,10 +25,11 @@ export const LogoContainer = styled(Link)`
   font-size: 1.2rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
-  > img {
-    width: 100%;
+  img {
+    width: 8rem;
     height: auto;
   }
+
   svg {
     fill: #335EEA;
     margin-right: 0.5rem;
@@ -74,7 +75,7 @@ export const MenuItemLink = styled(Link)`
   align-items: center;
   height: 100%;
   padding: 0.5rem 2.5rem;
-  color: #506690;
+  color: ${({ active }) => active === 'true' ? `${Colors.colorTextLinkActive}` : `${Colors.colorTextLinkNormal}`};
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   font-weight: 900;

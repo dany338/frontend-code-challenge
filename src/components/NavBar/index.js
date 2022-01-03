@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAtom } from 'jotai';
 import { IconContext } from "react-icons";
+import { useLocation } from "react-router-dom";
 import {
   Container,
   LogoContainer,
@@ -14,17 +15,18 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import { openModalSignAtom } from '../../atoms/user';
-import Logo from '../../assets/logo/matter-logo-alt.svg';
+import Logo from '../../assets/logo/logo.svg';
+import useAuth from '../../hooks/useAuth';
 
 const NavBar = () => {
-  const [openModalSign, setOpenModalSign] = useAtom(openModalSignAtom);
+  const location = useLocation();
+  const [ user, , onLogout ] = useAuth();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const handleLogin = e => {
+
+  const handleLogout = e => {
     e.preventDefault();
     setShowMobileMenu(!showMobileMenu);
-    setOpenModalSign(!openModalSign);
-    e.stopPropagation();
+    onLogout();
   };
 
   return (
@@ -44,25 +46,33 @@ const NavBar = () => {
 
           <Menu open={showMobileMenu}>
             <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)} to="/articles">
+              <MenuItemLink active={(location.pathname === '/').toString()} onClick={() => setShowMobileMenu(!showMobileMenu)} to="/">
                 <div>
-                  <span>Articles</span>
+                  <span>Gits</span>
                 </div>
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)} to="/favorites">
+              <MenuItemLink active={(location.pathname === '/favorites').toString()} onClick={() => setShowMobileMenu(!showMobileMenu)} to="/favorites">
                 <div>
-                  <span>Favorites</span>
+                  <span>Favorites Gits</span>
                 </div>
               </MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink onClick={e => handleLogin(e)} to="/">
-                <div>
-                  <span>Login</span>
-                </div>
-              </MenuItemLink>
+              {user ? (
+                <MenuItemLink onClick={e => handleLogout(e)} to="">
+                  <div>
+                    <span>Logout</span>
+                  </div>
+                </MenuItemLink>
+              ) : (
+                <MenuItemLink active={(location.pathname === '/login').toString()} state={{ backgroundLocation: location }} onClick={() => setShowMobileMenu(!showMobileMenu)} to="/login">
+                  <div>
+                    <span>Login</span>
+                  </div>
+                </MenuItemLink>
+              )}
             </MenuItem>
           </Menu>
         </IconContext.Provider>

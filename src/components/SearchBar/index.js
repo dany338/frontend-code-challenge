@@ -6,7 +6,7 @@ import {
 } from './styled';
 import SearchIcon from '../../assets/icons/search.svg';
 
-const SearchBar = ({ placeholder, value = '', onChangeValue, count }) => (
+const SearchBar = ({ fetchSearchByQuery, placeholder, value = '', onChangeValue, count, typeQuery }) => (
   <Container>
     <Wrapper>
       <SearchBox>
@@ -14,11 +14,11 @@ const SearchBar = ({ placeholder, value = '', onChangeValue, count }) => (
           src={SearchIcon}
           alt='Search...'
         />
-        <input type="text" placeholder={ placeholder } value={value} onChange={e => onChangeValue(e.target.value)} />
+        <input type="text" placeholder={ placeholder } value={value} onChange={e => onChangeValue(e.target.value, typeQuery)} />
         <div>
           <span>{count} results</span>
         </div>
-        <button>
+        <button onClick={() => fetchSearchByQuery(1, 6, 'search')}>
           <span>Search</span>
         </button>
       </SearchBox>

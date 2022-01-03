@@ -1,19 +1,17 @@
 import React from 'react';
-import { useAtom } from 'jotai';
-import TextButton from '../TextButton';
+import { useNavigate } from "react-router-dom";
+import TextButton from '../../components/TextButton';
 import {
   Container,
   Wrapper,
   ContainerNotFound
 } from './styled';
 import ImageBlogFemale from '../../assets/images/not-found.png';
-import { queryAtom } from '../../atoms/blog';
 
-const NotFound = () => {
-  const [, setQuery] = useAtom(queryAtom);
-
-  const handleCleanSearch = () => {
-    setQuery('');
+const Page404 = () => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate('/');
   };
 
   return (
@@ -22,8 +20,8 @@ const NotFound = () => {
         <ContainerNotFound image={ImageBlogFemale}>
           <div className="description">
             <span>Uh oh.</span>
-            <p>We don't have blogs yet, register and add new blogs.</p>
-            <TextButton width="9.563" type="button" text="Back to safety" onClick={() => handleCleanSearch()} />
+            <p>We access this url sorry!.</p>
+            <TextButton width="9.563" type="button" text="Back to home" onClick={() => goToHome()} />
           </div>
           <div className="image" />
         </ContainerNotFound>
@@ -32,4 +30,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default Page404

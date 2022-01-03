@@ -4,30 +4,40 @@
       "id": 1,
       "fullname": "DANIEL GALLO",
       "email": "dany338@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "token": "337cef1a-0148-449f-b55c-8697108b3f3c"
     },
     {
       "id": 2,
       "fullname": "CRISTIAN SUAREZ",
       "email": "cristian@correo.com",
-      "password": "cristian"
+      "password": "cristian",
+      "token": "337cef1a-0148-449f-b55c-8697108b3f32"
     },
     {
       "id": 3,
       "fullname": "ALIVE COOPER",
       "email": "alive.cooper@correo.com",
-      "password": "alive.cooper"
+      "password": "alive.cooper",
+      "token": "337cef1a-0148-449f-b55c-8697108b3f33"
+    },
+    {
+      "id": 4,
+      "fullname": "JUAN PEREZ",
+      "email": "juan.perez@correo.com",
+      "password": "juan.perez",
+      "token": "337cef1a-0148-449f-b55c-8697108b3f34"
     }
   ],
   "blogs": [
     {
       "id": 1,
-      "user_id": 3,
+      "userId": 3,
       "title": "Should I work remotely or will it put a strain on my long-term career?",
       "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-female.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/background.png",
       "published": "Dec 24, 2021",
       "price": "49",
       "colorPrice": "primary",
@@ -35,38 +45,38 @@
     },
     {
       "id": 2,
-      "user_id": 3,
+      "userId": 3,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-male.png",
-      "published": "May 20, 2019",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-male.png",
+      "published": "Dec 20, 2021",
       "price": "49",
       "colorPrice": "secundary",
       "favorite": false
     },
     {
       "id": 3,
-      "user_id": 3,
+      "userId": 3,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-nature.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-nature.png",
       "published": "May 20, 2019",
       "price": "49",
       "colorPrice": "terciary",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 4,
-      "user_id": 3,
+      "userId": 2,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-nature.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/background.png",
       "published": "May 20, 2019",
       "price": "49",
       "colorPrice": "primary",
@@ -74,12 +84,12 @@
     },
     {
       "id": 5,
-      "user_id": 3,
+      "userId": 3,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-female.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-female.png",
       "published": "May 20, 2019",
       "price": "49",
       "colorPrice": "secundary",
@@ -87,29 +97,51 @@
     },
     {
       "id": 6,
-      "user_id": 3,
+      "userId": 3,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "ALIVE COOPER",
-      "image": "./assets/images/image-blog-male.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-male.png",
       "published": "May 20, 2019",
       "price": "49",
       "colorPrice": "terciary",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 7,
-      "user_id": 1,
+      "userId": 1,
       "title": "Keeping the dream alive by traveling the world.",
-      "description": "Keep the dream alive by",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.",
       "content": "Keep the dream alive by",
       "author": "DANIEL GALLO",
-      "image": "./assets/images/image-blog-male.png",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-male.png",
       "published": "May 20, 2021",
       "price": "49",
       "colorPrice": "primary",
       "favorite": false
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "title": "Keeping the dream alive by traveling the world. daniel",
+      "description": "As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup. daniel",
+      "content": "Keep the dream alive by daniel",
+      "author": "DANIEL GALLO",
+      "image": "https://www.historiaclinicaduo.com/blogs/image-blog-nature.png",
+      "published": "Jan 02, 2022",
+      "price": "49",
+      "colorPrice": "primary",
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "title": "Keeping the dream alive by traveling the world.",
+      "description": "Keep the dream alive by",
+      "content": "Keep the dream alive by",
+      "author": "DANIEL GALLO",
+      "image": "https://www.historiaclinicaduo.com/blogs/background.png",
+      "published": "May 20, 2021"
     }
   ]
 }
