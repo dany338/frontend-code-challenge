@@ -24,6 +24,8 @@ const useFormSign = (values) => {
     if (typeof response === 'object') {
       setUser(response);
       setAuthed(true);
+      await waitFor(100);
+      navigate(-1);
     }
     setIsLoading(false);
   };
